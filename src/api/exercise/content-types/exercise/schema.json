@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exercises",
+  "info": {
+    "singularName": "exercise",
+    "pluralName": "exercises",
+    "displayName": "Exercise",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "burnedCalories": {
+      "type": "integer"
+    },
+    "time": {
+      "type": "integer"
+    },
+    "bodyPart": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "decimal"
+    },
+    "equipment": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "exercises"
+    },
+    "popularity": {
+      "type": "biginteger"
+    },
+    "gifUrl": {
+      "type": "string"
+    }
+  }
+}
